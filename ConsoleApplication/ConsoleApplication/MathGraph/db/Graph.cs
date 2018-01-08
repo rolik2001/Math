@@ -16,5 +16,10 @@ namespace ConsoleApplication.MathGraph.db
             Field = field;
             PreviousId = previousId;
         }
+
+        public Graph()
+        {
+            Id = "test";
+        }
     }
 }

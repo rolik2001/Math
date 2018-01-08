@@ -1,11 +1,11 @@
 C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe
 C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
-C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\mscorlib.dll
-C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\normidna.nlp
-C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\normnfc.nlp
-C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\normnfd.nlp
-C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\normnfkc.nlp
-C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\normnfkd.nlp
 C:\MAth\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
 C:\MAth\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
 C:\MAth\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
+C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\Firebase.dll
+C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\Newtonsoft.Json.dll
+C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\System.Reactive.dll
+C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
+C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\System.Reactive.xml
