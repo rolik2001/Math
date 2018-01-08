@@ -7,6 +7,9 @@
         <e p="ConsoleApplication.csproj" t="IncludeRecursive" />
         <e p="MathGraph" t="Include">
           <e p="CreateGraph.cs" t="Include" />
+          <e p="db" t="Include">
+            <e p="Graph.cs" t="Include" />
+          </e>
           <e p="Node.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
