@@ -9,3 +9,4 @@ C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\System.Reactive.dll
 C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
 C:\MAth\ConsoleApplication\ConsoleApplication\bin\Debug\System.Reactive.xml
+C:\MAth\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csproj.CoreCompileInputs.cache

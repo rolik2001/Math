@@ -3,6 +3,9 @@
   <component name="ContentModelStore">
     <e p="C:\MAth\ConsoleApplication" t="IncludeFlat">
       <e p="ConsoleApplication" t="IncludeRecursive">
+        <e p="2Task" t="Include">
+          <e p="Start.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="ConsoleApplication.csproj" t="IncludeRecursive" />
         <e p="MathGraph" t="Include">

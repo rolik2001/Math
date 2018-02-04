@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ConsoleApplication.MathGraph;
+using ConsoleApplication._2Task;
 
 namespace ConsoleApplication
 {
@@ -8,7 +9,8 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            CreateGraph.Start();
+//            CreateGraph.Start();
+            Start.StartWork();
         }
     }
 }

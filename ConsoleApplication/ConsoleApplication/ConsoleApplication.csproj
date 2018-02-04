@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2Task\Start.cs" />
     <Compile Include="MathGraph\CreateGraph.cs" />
     <Compile Include="MathGraph\db\Graph.cs" />
     <Compile Include="MathGraph\Node.cs" />
