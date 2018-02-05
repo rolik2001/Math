@@ -1,82 +1,95 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ConsoleApplication._2Task
 {
     public class Start
     {
-       public static int[,] FieldList = new int[10,10];
+       public static int SizeOfField = 10;
+       public static int[,] Field = 
+       {
+           {1,0,1,1,0,1,1,0,0,1},
+           {1,1,1,0,0,0,0,1,1,0},
+           {1,1,0,1,1,1,0,1,1,1},
+           {0,1,1,1,1,0,0,0,0,0},
+           {1,0,0,0,0,1,1,0,1,1},
+           {1,0,0,0,0,0,0,0,0,1},
+           {1,1,1,0,0,0,1,1,0,0},
+           {1,0,0,0,0,1,1,0,0,0},
+           {1,1,0,0,1,0,1,0,0,0},
+           {1,0,0,1,0,0,1,0,1,0}
+       };
        public static Random random = new Random();
        public static int Itteration = 10;
         
         public static void  StartWork()
         {
-            GenerateField();
-            FieldList[0,0] = 1;
-            Show();
+            
+//            GenerateField();
+            WriteInConsole();
             int i = 0;
             while (i<Itteration)
             {
-                StartGame();
-                Show();
+                Game();
+                WriteInConsole();
                 i++;
             }
+                
         }
 
-        private static void StartGame()
+        private static void Game()
         {
-            for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 10; j++)
+            for (int index1 = 0; index1 < SizeOfField; index1++)
+            for (int index2 = 0; index2 < SizeOfField; index2++)
             {
-                int amount = NumberOfNeighbors(i, j);
-                if(FieldList[i,j] == 1)
+                int amount = NumberOfNeighbors(index1, index2);
+                if(Field[index1,index2] == 1)
                     if (amount <= 1)
-                        FieldList[i, j] = 0;
+                        Field[index1, index2] = 0;
                     else if (amount >= 4)
-                        FieldList[i, j] = 0;
-                else if (FieldList[i,j] ==0)
+                        Field[index1, index2] = 0;
+                else if (Field[index1,index2] ==0)
                         if (amount == 3)
-                            FieldList[i, j] = 1;
+                            Field[index1, index2] = 1;
             }
         }
 
-        private static int NumberOfNeighbors(int i, int j)
+        private static int NumberOfNeighbors(int index1, int index2)
         {
-            int all = 0;
-            if((i-1) >= 0 && (j-1) >= 0) // 1 
-                if (FieldList[i - 1, j - 1] == 1)
-                    all = all + 1;
-            if((i-1) >= 0) // 2
-                if (FieldList[i - 1, j] == 1)
-                    all = all + 1;       
-            if((i-1) >= 0 && (j+1) <= 9) // 3 
-                if (FieldList[i - 1, j + 1] == 1)
-                    all = all + 1;
-            if((j-1) >= 0) // 4
-                if (FieldList[i, j - 1] == 1)
-                    all = all + 1;
-            if((j+1) <= 9) // 6 
-                if (FieldList[i, j + 1] == 1)
-                    all = all + 1;
-            if((i+1) <= 9 && (j-1) >= 0) // 1 
-                if (FieldList[i+1, j - 1] == 1)
-                    all = all + 1;
-            if((i+1) <= 9) // 2
-                if (FieldList[i + 1, j] == 1)
-                    all = all + 1;       
-            if((i+1) <= 9 && (j+1) <= 9) // 3 
-                if (FieldList[i + 1, j + 1] == 1)
-                    all = all + 1;
-           return all;           
+            int amountOfNeighbors = 0;
+            if ((index1 - 1) >= 0 && (index2 - 1) >= 0) // 1 
+                amountOfNeighbors = Check(index1-1,index2-1,amountOfNeighbors);
+            if((index1-1) >= 0) // 2
+                amountOfNeighbors = Check(index1-1,index2,amountOfNeighbors);
+            if((index1-1) >= 0 && (index2+1) <= 9) // 3 
+                amountOfNeighbors = Check(index1-1,index2+1,amountOfNeighbors);
+            if((index2-1) >= 0) // 4
+                amountOfNeighbors = Check(index1,index2-1,amountOfNeighbors);
+            if((index2+1) <= 9) // 6 
+                amountOfNeighbors = Check(index1,index2+1,amountOfNeighbors);
+            if((index1+1) <= 9 && (index2-1) >= 0) // 7
+                amountOfNeighbors = Check(index1+1,index2-1,amountOfNeighbors);
+            if((index1+1) <= 9) // 8
+                amountOfNeighbors = Check(index1+1,index2,amountOfNeighbors);       
+            if((index1+1) <= 9 && (index2+1) <= 9) // 9 
+                amountOfNeighbors = Check(index1+1,index2+1,amountOfNeighbors);
+           return amountOfNeighbors;           
          
         }
 
-        private static void Show()
+        private static int Check(int i, int j, int all)
         {
-            for (int i = 0; i < 10; i++)
+            if (Field[i, j] == 1)
+                all = all + 1;       
+            return all;
+        }
+
+
+        private static void WriteInConsole()
+        {
+            for (int i = 0; i < SizeOfField; i++)
             {
-                for (int j = 0; j < 10; j++)
-                    Console.Write(" "+FieldList[i,j]);
+                for (int j = 0; j < SizeOfField; j++)
+                    Console.Write(" "+Field[i,j]);
                 Console.WriteLine();
             }
             Console.WriteLine("_____________________________________");
@@ -84,9 +97,10 @@ namespace ConsoleApplication._2Task
 
         public static void GenerateField()
         {
-            for (int i = 0; i < 10; i++)
-                for (int j = 0; j < 10; j++)
-                    FieldList[i,j] = random.Next(0,2);
+            Field = new int[SizeOfField, SizeOfField];
+            for (int i = 0; i < SizeOfField; i++)
+                for (int j = 0; j < SizeOfField; j++)
+                    Field[i,j] = random.Next(0,2);
         }
         
     }
